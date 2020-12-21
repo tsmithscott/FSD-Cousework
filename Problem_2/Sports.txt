@@ -1,0 +1,30 @@
+Basketball 
+Volleyball 
+Gymnastics 
+Swimming 
+Badminton 
+Archery 
+Beach volleyball 
+Boxing 
+Cycling 
+Diving 
+Equestrian 
+Fencing 
+Football 
+Golf 
+Handball 
+Hockey 
+Golf 
+Hockey 
+Bowling 
+Judo 
+Karate 
+Tennis 
+Weightlifting
+
+    for (i = 0; i < MAX_LENGTH; i++) {
+        if (s[index][i] == 'A' || s[index][i] == 'E' || s[index][i] == 'I' || s[index][i] == 'O' || s[index][i] == 'U' ||
+            s[index][i] == 'a' || s[index][i] == 'e' || s[index][i] == 'i' || s[index][i] == 'o' || s[index][i] == 'u') {
+            vowel_count++;
+        }
+    }
