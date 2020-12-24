@@ -19,16 +19,21 @@ void sort(float arr[], int len) {
     }
 }
 
-float mean(float arr[], int len) {      // Requires an array of numbers and its number of elements
+float sum(float arr[], int len) {
     int i;
-    float sum = 0.0;
-    for (i=0; i < len; i++) {
+    float sum;
+    for (i = 0; i < len; i++) {
         sum += arr[i];
     }
-    return sum/len;
+    return sum;
 }
 
-float median(float arr[], int len) {        // Requires an array of numbers and its number of elements
+float mean(float arr[], int len) {
+    int i;
+    return sum(arr, len)/len;
+}
+
+float median(float arr[], int len) {
     sort(arr, len);
     if (len % 2 == 0) {
         return ((arr[len / 2] + arr[len / 2 - 1]) / 2.0);
@@ -36,4 +41,29 @@ float median(float arr[], int len) {        // Requires an array of numbers and 
     else {
         return arr[len / 2];
     }
+}
+
+float stdDeviation(float arr[], int len) {
+    int i, j, k;
+    float new_arr[len];
+    float avg = mean(arr, len);
+    for (i = 0; i < len; i++) {
+        new_arr[i] = pow(arr[i] - avg, 2);
+    }
+    return sqrt(mean(new_arr, len));
+}
+
+float kurtosis(float arr[], int len) {      //TODO: Get this working
+    int i, j;
+    float avg = mean(arr, len);
+    float a = 0.0, b = 0.0, c, d;
+    for (i = 0; i < len; i++) {
+        a += pow((arr[i] - avg), 4);
+    }
+    for (i = 0; i < len; i++) {
+        b += pow((arr[i] - avg), 2);
+    }
+    c = a / pow(b, 2);
+    d = len * c - 3;
+    return d;
 }
