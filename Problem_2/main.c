@@ -3,6 +3,7 @@
 #define MAX_STRINGS 10
 #define MAX_LENGTH 30
 
+
 void find_lens(char s[MAX_STRINGS][MAX_LENGTH], int l[MAX_STRINGS]);
 int vowels(char s[MAX_STRINGS][MAX_LENGTH], int index);
 int largest(int l[MAX_STRINGS]);
@@ -50,7 +51,7 @@ void find_lens(char s[MAX_STRINGS][MAX_LENGTH], int l[MAX_STRINGS]) {
 
 
 int vowels(char s[MAX_STRINGS][MAX_LENGTH], int index) {
-    int vowel_count=0, i;
+    int i, vowel_count = 0;
     for (i = 0; i < MAX_LENGTH; i++) {
         if (s[index][i] == 'A' || s[index][i] == 'E' || s[index][i] == 'I' || s[index][i] == 'O' || s[index][i] == 'U' ||
             s[index][i] == 'a' || s[index][i] == 'e' || s[index][i] == 'i' || s[index][i] == 'o' || s[index][i] == 'u') {
@@ -62,7 +63,7 @@ int vowels(char s[MAX_STRINGS][MAX_LENGTH], int index) {
 
 
 int largest(int l[MAX_STRINGS]) {
-    int i, len_largest=0;
+    int i, len_largest = 0;
     for (i = 0; i < 10; i++) {
         if (l[i] > len_largest) {
             len_largest = l[i];
