@@ -8,6 +8,7 @@ int vowels(char s[MAX_STRINGS][MAX_LENGTH], int index);
 int largest(int l[MAX_STRINGS]);
 int smallest(int l[MAX_STRINGS]);
 
+
 int main() {
     int i, len[MAX_LENGTH], no_min = 0, no_max = 0;
     char sports[MAX_STRINGS][MAX_LENGTH];
@@ -38,6 +39,7 @@ int main() {
         }
     }
 }
+
 
 void find_lens(char s[MAX_STRINGS][MAX_LENGTH], int l[MAX_STRINGS]) {
     int i = 0;
