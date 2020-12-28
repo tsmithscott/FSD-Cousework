@@ -2,11 +2,13 @@
 #include <math.h>
 #include <stdio.h>
 
+
 void swap(float *a, float *b) {
     float temp = *a;
     *a = *b;
     *b = temp;
 }
+
 
 void sort(float arr[], int len) {
     int i, j;
@@ -19,6 +21,7 @@ void sort(float arr[], int len) {
     }
 }
 
+
 float sum(float arr[], int len) {
     int i;
     float sum;
@@ -28,10 +31,12 @@ float sum(float arr[], int len) {
     return sum;
 }
 
+
 float mean(float arr[], int len) {
     int i;
     return sum(arr, len)/len;
 }
+
 
 float median(float arr[], int len) {
     sort(arr, len);
@@ -43,6 +48,7 @@ float median(float arr[], int len) {
     }
 }
 
+
 float stdDeviation(float arr[], int len) {
     int i, j, k;
     float new_arr[len];
@@ -52,6 +58,7 @@ float stdDeviation(float arr[], int len) {
     }
     return sqrt(mean(new_arr, len));
 }
+
 
 float kurtosis(float arr[], int len) {      //TODO: Get this working
     int i, j;
@@ -64,6 +71,6 @@ float kurtosis(float arr[], int len) {      //TODO: Get this working
         b += pow((arr[i] - avg), 2);
     }
     c = a / pow(b, 2);
-    d = len * c - 3;
+    d = len * c;
     return d;
 }

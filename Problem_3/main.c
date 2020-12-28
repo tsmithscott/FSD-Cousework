@@ -1,13 +1,7 @@
 #include <stdio.h>
 #include "stats.h"
 
-double test_array[6] =  {1, 2, 5, 10, 20, 50};
-void printArray(float arr[], int len) {
-    int i;
-    for (i = 0; i < len; i++){
-        printf("%f ", arr[i]);
-    }
-}
+// Test numbers {1, 2, 5, 10, 20, 50};
 
 int main() {
     int i, len;
@@ -19,8 +13,8 @@ int main() {
         scanf("%f", &array[i]);
     }
     printf("\n(Everything is to 2dp)\n");
-    printf("\nMean: %.2f        Median: %.2f\n"
-           "Standard Deviation: %.2f        Kurtosis: %.2f", 
+    printf("\nMean: %.2f\nMedian: %.2f"
+           "\nStandard Deviation: %.2f\nKurtosis: %.2f", 
            mean(array, len), median(array, len), 
            stdDeviation(array, len), kurtosis(array, len));
     return 0;
