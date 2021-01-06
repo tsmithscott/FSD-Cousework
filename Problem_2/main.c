@@ -11,9 +11,8 @@ int smallest(int l[MAX_STRINGS]);
 
 
 int main() {
-    int i, len[MAX_LENGTH], no_min = 0, no_max = 0;
+    int i, lengths[MAX_STRINGS];
     char sports[MAX_STRINGS][MAX_LENGTH];
-    int lengths[MAX_STRINGS];
 
     printf("Enter the name of 10 sports: \n");
     for (i = 0; i < 10; i++) {

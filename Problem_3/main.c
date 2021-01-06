@@ -1,17 +1,18 @@
 #include <stdio.h>
 #include "stats.h"
 
-// Test numbers {1, 2, 5, 10, 20, 50};
-
 int main() {
     int i, len;
+
     printf("Enter the number of elements required:\n");
     scanf("%d", &len);
     float array[len];
+
     printf("\nEnter the numbers:\n");
     for (i=0; i<len; i++) {
         scanf("%f", &array[i]);
     }
+
     printf("\n(Everything is to 2dp)\n");
     printf("\nMean: %.2f\nMedian: %.2f"
            "\nStandard Deviation: %.2f\nKurtosis: %.2f", 
