@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <math.h>
-#include <stdio.h>
 
 
 void swap(float *a, float *b) {
