@@ -60,7 +60,7 @@ float stdDeviation(float arr[], int len) {
 }
 
 
-float kurtosis(float arr[], int len) {      //TODO: Get this working
+float kurtosis(float arr[], int len) {
     int i, j;
     float avg = mean(arr, len);
     float a = 0.0, b = 0.0, c, d;
