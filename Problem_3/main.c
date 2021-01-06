@@ -13,10 +13,10 @@ int main() {
         scanf("%f", &array[i]);
     }
 
-    printf("\n(Everything is to 2dp)\n");
-    printf("\nMean: %.2f\nMedian: %.2f"
-           "\nStandard Deviation: %.2f\nKurtosis: %.2f", 
-           mean(array, len), median(array, len), 
+    printf("\n(Everything is to 2dp)\n"
+           "\nMean: %.2f\nMedian: %.2f"
+           "\nStandard Deviation: %.2f\nKurtosis: %.2f",
+           mean(array, len), median(array, len),
            stdDeviation(array, len), kurtosis(array, len));
     return 0;
 }
