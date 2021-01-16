@@ -15,11 +15,11 @@ int main() {
     char sports[MAX_STRINGS][MAX_LENGTH];
 
     printf("Enter the name of 10 sports: \n");
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < MAX_STRINGS; i++) {
         scanf("%[^\n]%*c", sports[i]);
     }
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < MAX_STRINGS; i++) {
         printf("\nName: %s        Vowels: %d", sports[i], vowels(sports, i));
     }
 
@@ -38,6 +38,7 @@ int main() {
             printf("%s\n          ", sports[i]);
         }
     }
+    return 0;
 }
 
 

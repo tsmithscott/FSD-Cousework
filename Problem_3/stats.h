@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <math.h>
 
 
@@ -23,7 +22,7 @@ void sort(float arr[], int len) {
 
 float sum(float arr[], int len) {
     int i;
-    float sum;
+    float sum = 0.0;
     for (i = 0; i < len; i++) {
         sum += arr[i];
     }
@@ -32,7 +31,6 @@ float sum(float arr[], int len) {
 
 
 float mean(float arr[], int len) {
-    int i;
     return sum(arr, len)/len;
 }
 
@@ -49,7 +47,7 @@ float median(float arr[], int len) {
 
 
 float stdDeviation(float arr[], int len) {
-    int i, j, k;
+    int i;
     float new_arr[len];
     float avg = mean(arr, len);
     for (i = 0; i < len; i++) {
@@ -60,16 +58,11 @@ float stdDeviation(float arr[], int len) {
 
 
 float kurtosis(float arr[], int len) {
-    int i, j;
+    int i;
     float avg = mean(arr, len);
-    float a = 0.0, b = 0.0, c, d;
+    float a = 0.0;
     for (i = 0; i < len; i++) {
         a += pow((arr[i] - avg), 4);
     }
-    for (i = 0; i < len; i++) {
-        b += pow((arr[i] - avg), 2);
-    }
-    c = a / pow(b, 2);
-    d = len * c;
-    return d;
+    return a / (len*pow(stdDeviation(arr, len), 4));
 }
